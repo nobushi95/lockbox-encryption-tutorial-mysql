@@ -1,0 +1,5 @@
+.env
+*.log
+
+# Claude Code internal data
+.claude/
