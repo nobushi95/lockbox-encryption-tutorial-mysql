@@ -1,0 +1,30 @@
+<h1>ユーザー一覧</h1>
+
+<%= link_to "新規登録", new_user_path %>
+
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
+
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>名前</th>
+      <th>Email</th>
+      <th>電話番号</th>
+      <th>作成日時</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
