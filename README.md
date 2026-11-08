@@ -44,7 +44,7 @@ cp .env.example .env
 **2. LOCKBOX_MASTER_KEY を生成して `.env` に設定する**
 
 ```bash
-docker run --rm ruby:3.3.10-slim ruby -e "require 'lockbox'; puts Lockbox.generate_key"
+docker run --rm ruby:3.3.13-slim ruby -e "require 'lockbox'; puts Lockbox.generate_key"
 ```
 
 出力された64文字の16進数文字列を `.env` の `LOCKBOX_MASTER_KEY=` に設定します。
